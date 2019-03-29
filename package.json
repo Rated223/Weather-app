@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Rated223/Weather.app#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
     "request": "^2.88.0"
   }
 }
