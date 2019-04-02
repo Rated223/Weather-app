@@ -24,7 +24,7 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'About',
+    title: 'About', 
     name: 'Andrew Mead'
   });
 });
@@ -39,7 +39,23 @@ app.get('/help', (req, res) => {
 
 app.get('/weather', (req, res) => {
   res.send('weather page');
+});
+
+app.get('/help/*', (req, res) => {
+  res.render('help404', {
+    title: '404',
+    msgError: 'Error 404: help article not found',
+    name: 'Andrew Mead'
+  })
 })
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    mdgError: 'Error 404: Page not found',
+    name: 'Andrew Mead'
+  })
+});
 
 app.listen(3006, () => {
   console.log('server running in port 3006');
