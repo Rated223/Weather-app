@@ -9,12 +9,7 @@ const forecast = (latitude, longitude, callback) => {
     } else if (error2) {
       callback(error2, undefined);
     } else {
-      callback(undefined, {
-        summary: daily.data[0].summary,
-        temperature: currently.temperature,
-        precipProbability: currently.precipProbability
-
-      });
+      callback(undefined, daily.data[0].summary + ' It is currently ' + currently.temperature + ' degress out. There is a ' + currently.precipProbability + '% chance of rain.')
     }
   });
 }
