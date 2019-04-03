@@ -23,14 +23,14 @@ app.use(express.static(publicDirectoryPath)); // this routes gonna have priority
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather app',
-    name: 'Andrew Mead'
+    name: 'Daniel Carrizales J.'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About', 
-    name: 'Andrew Mead'
+    name: 'Daniel Carrizales J.'
   });
 });
 
@@ -38,7 +38,7 @@ app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
     helpText: 'This is a help text gueguegue',
-    name: 'Andrew Mead'
+    name: 'Daniel Carrizales J.'
   });
 });
 
