@@ -8,6 +8,9 @@ console.log(__dirname);
 console.log(path.join(__dirname, '../public'));
 
 const app = express();
+
+const port = process.env.PORT || 3006;
+
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -90,7 +93,7 @@ app.get('*', (req, res) => {
   })
 });
 
-app.listen(3006, () => {
-  console.log('server running in port 3006');
+app.listen(port, () => {
+  console.log(`server running in port ${port}`);
 })
 
